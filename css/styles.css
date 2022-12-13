@@ -40,10 +40,12 @@ hai isliye pehle humko isko block display karna padega */
 
 input{
      width:100px;
+     font-size: 25px;
      height: 40px;
     display: block;
     margin: auto 40px;
     background-color: rgba(255 ,255,255,0.7);
     border:none;
     border-radius: 5px;
+    text-align: center;
 }
