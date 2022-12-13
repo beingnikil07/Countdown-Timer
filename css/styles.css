@@ -1,5 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background: url('../images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0,0, 0.6);
+}
+.title{
+    color: white;
+    margin: 10px auto;
+    font-size:2rem; 
+}
+.col{
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:10px auto;
+    text-align: center; 
+    color: white;   
+}
+/* input ka label niche nhi aaya kyuki input ek inline element
+hai isliye pehle humko isko block display karna padega */
+
+input{
+     width:100px;
+     height: 40px;
+    display: block;
+    margin: auto 40px;
+    background-color: rgba(255 ,255,255,0.7);
+    border:none;
+    border-radius: 5px;
 }
