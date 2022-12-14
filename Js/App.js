@@ -1,13 +1,24 @@
-const endDate = "15 December 2022 8:00 PM";
+const endDate = "14 December 2022 11:00 AM";
 document.getElementById("end-date").innerText = endDate; // Setting date dynamically
-
-function clock(){
-    const end=new Date(endDate)
-    const now=new Date()                   
-    const diff=end-now;
-    console.log(diff);     // This will shows you the difference b/w end date and current date
-    
+const inputs = document.querySelectorAll("input");
+function clock() {
+  const end = new Date(endDate);
+  const now = new Date();
+  const diff = (end - now) / 1000; // Converting milliseconds to seconds
+  inputs[0].value = Math.floor(diff / 3600 / 24); //Calculation for days
+  inputs[1].value = Math.floor((diff / 3600) % 24); // Gives you hours always <=24 becz of remainder operator
+  inputs[2].value = Math.floor((diff / 60) % 60); // Gives you Minutes
+  inputs[3].value = Math.floor(diff % 60); // Gives you seconds
 }
 
 // Initial call
 clock();
+
+/**
+ *  If we divide milliseconds to 1000 then we get the seconds of milliseconds
+ *  we know that
+ *  1 Day=24 hrs
+ *  1hr =60 minutes
+ *  60 minutes=3600 seconds
+ *
+ */
